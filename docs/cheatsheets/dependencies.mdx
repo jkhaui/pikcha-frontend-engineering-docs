@@ -1,0 +1,28 @@
+---
+sidebar_position: 3
+---
+
+# Dependencies
+
+## Installing Dependencies
+
+_Within the `/PikchaWebApp/ClientApp` root directory_:
+```shell
+> yarn
+```
+
+Please remember that **we only use yarn as our package manager!!!**.
+
+**Use of npm is strictly forbidden** (and will throw an error in your
+terminal if you try running `npm i`) because mixing of `package-lock.json` and
+`yarn.lock` files can cause serious conflicts amongst developers' environments.
+
+## Adding New Dependencies
+N.b. Firstly, check the [UI Workflow cheatsheet](./ui-workflow) __to determine
+if you should even be adding a new package__.
+
+E.g. Adding the `react-eyedrop` package to the main app:
+```shell
+> cd packages/app
+> yarn add react-eyedrop
+```

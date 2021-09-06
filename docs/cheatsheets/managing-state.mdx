@@ -1,0 +1,32 @@
+---
+sidebar_position: 6
+---
+
+# Managing State
+
+_N.b. As of 06/09/2021, **we will begin the process of deprecating Redux-related
+code** to prepare for the transition to Apollo Client as a single data & state
+management store._
+
+## Should I be using Redux?
+Having a deterministic global state container is excellent, but if we're
+being real, Redux can often be more hassle then it's worth. Use this quick
+checklist to determine whether to use Redux or local component state.
+
+#### _Does state need to be shared?_
+- Yes: consider how many levels props will need to be drilled down.
+- No: don't use Redux.
+
+#### _State Persistence_
+Is it essential that the state (or some slice of it) is persisted for the
+entirety of the browser session?
+- Yes: use Redux.
+- No: consider other reasons for using Redux. If there isn't any, then
+ephemeral state localised to a component (_i.e. `useState();`_) should suffice.
+
+#### _Do You Know How to Use Redux?_
+- Yes: then you should know your answer by now.
+- No: if you're a backend developer and aren't fully comfortable with Redux
+patterns, that's fine. We'd much prefer it if you stick to what you're
+comfortable with, such as local state. Consult a frontend dev if you can't
+complete your task without involving Redux.
